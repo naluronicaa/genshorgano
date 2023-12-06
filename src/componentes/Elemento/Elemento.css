@@ -1,0 +1,11 @@
+.elemento{
+    text-align: center;
+    padding: 32px;
+}
+
+.elemento h3{
+    font-size: 30px;
+    border-bottom: 4px solid;
+    display: inline-block;
+    padding-bottom: 8px;
+}

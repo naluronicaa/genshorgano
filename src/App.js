@@ -2,10 +2,16 @@ import { useState } from 'react';
 import Banner from './componentes/Banner';
 import Formulario from './componentes/Formulario';
 import Elemento from './componentes/Elemento';
+import Rodape from './componentes/Rodape';
 
 function App() {
 
   const elementos = [
+    {
+      nome: '',
+      corPrim: '',
+      corSecon: ''
+    },
     {
       nome: 'Anemo',
       corPrim: '#2A9D8E',
@@ -63,6 +69,7 @@ function App() {
         personagens={personagens.filter(personagem => personagem.elemento === elemento.nome)}
       />)}
 
+      <Rodape/>
     </div>
   );
 }

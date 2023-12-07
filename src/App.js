@@ -3,7 +3,6 @@ import Banner from './componentes/Banner';
 import Formulario from './componentes/Formulario';
 import Elemento from './componentes/Elemento';
 
-
 function App() {
 
   const elementos = [
@@ -56,7 +55,13 @@ function App() {
 
       <Formulario elementos={elementos.map(elemento => elemento.nome)} aoPersonagemCadastrado={personagem => aoNovoPerAdd(personagem)}/>
 
-      {elementos.map(elemento => <Elemento key={elemento.nome} nome={elemento.nome} corPrim ={elemento.corPrim} corSecon={elemento.corSecon}/>)}
+      {elementos.map(elemento => <Elemento 
+        key={elemento.nome} 
+        nome={elemento.nome} 
+        corPrim ={elemento.corPrim} 
+        corSecon={elemento.corSecon}
+        personagens={personagens.filter(personagem => personagem.elemento === elemento.nome)}
+      />)}
 
     </div>
   );

@@ -11,13 +11,16 @@ const Formulario = (props) => {
     const [img, setImg] = useState('')
     const [elemento, setElemento] = useState('')
 
-
-
     const aoSalvar = (evento) =>{
         evento.preventDefault()
         props.aoPersonagemCadastrado({
-            nome: nome, funcao: funcao, img: img, elemento:elemento
+            nome, funcao, img, elemento
         })
+
+        setNome('')
+        setFuncao('')
+        setImg('')
+        setElemento('')
     }
 
     return(

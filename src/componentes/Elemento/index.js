@@ -1,10 +1,19 @@
+import Personagem from '../Personagem'
 import './Elemento.css'
 
 const Elemento = (props) => {
     return(
-        <section className='elemento' style={{backgroundColor: props.corSecon}}>
+        (props.personagens.length > 0) ? <section className='elemento' style={{backgroundColor: props.corSecon}}>
             <h3 style={{borderColor: props.corPrim}}>{props.nome}</h3>
-        </section>
+            <div className='personagens'>
+                {props.personagens.map(personagem => <Personagem 
+                    nome={personagem.nome} 
+                    funcao={personagem.funcao}
+                    img={personagem.img}
+                    cor={props.corPrim}
+                />)}
+            </div>
+        </section> : ''
     )
 }
 

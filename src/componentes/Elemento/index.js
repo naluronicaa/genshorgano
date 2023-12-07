@@ -6,7 +6,8 @@ const Elemento = (props) => {
         (props.personagens.length > 0) ? <section className='elemento' style={{backgroundColor: props.corSecon}}>
             <h3 style={{borderColor: props.corPrim}}>{props.nome}</h3>
             <div className='personagens'>
-                {props.personagens.map(personagem => <Personagem 
+                {props.personagens.map(personagem => <Personagem
+                    key={personagem.nome} 
                     nome={personagem.nome} 
                     funcao={personagem.funcao}
                     img={personagem.img}

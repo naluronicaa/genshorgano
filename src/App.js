@@ -8,11 +8,6 @@ function App() {
 
   const elementos = [
     {
-      nome: '',
-      corPrim: '',
-      corSecon: ''
-    },
-    {
       nome: 'Anemo',
       corPrim: '#2A9D8E',
       corSecon: '#A6E5DD'
